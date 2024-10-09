@@ -3362,12 +3362,21 @@
                                                         <span class="info-box-text">{{ $quiz->title }}</span> <!-- Hiển thị tiêu đề bài thi -->
                                                         <style>
                                                             .info-box-text {
-                                                                display: inline-block;
+    display: inline-block;
     width: 380px;
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;
 }
+
+/* Media query cho màn hình nhỏ hơn 768px (hoặc kích thước bạn muốn) */
+@media (max-width: 768px) {
+    .info-box-text {
+        width: 100%; /* Đặt chiều rộng là 100% trên màn hình di động */
+        max-width: 300px; /* Hoặc bạn có thể đặt giá trị cụ thể nếu cần */
+    }
+}
+
 
                                                         </style>
                                                         <p class="info-box-des">{{ $quiz->description }}</p> <!-- Hiển thị mô tả bài thi -->
